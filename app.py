@@ -9,7 +9,7 @@ import pandas as pd
 app = FastAPI()
 
 # Load the trained model and necessary encoders/scalers
-model = joblib.load("gradient_boosting_crop_model.pkl")
+model = joblib.load("crop_model.pkl")
 scaler = joblib.load("scaler.pkl")
 label_encoder = joblib.load("label_encoder.pkl")
 

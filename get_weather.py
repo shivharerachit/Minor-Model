@@ -23,7 +23,11 @@ def get_weather(city):
             temperature = weather['temp']['day']
             humidity = weather['humidity']
             rainfall = weather.get('rain', {}).get('1h', 0.0)  
-            return f"{temperature},{humidity},{rainfall}"
+            return {
+                'Temperature': temperature, 
+                'Humidity': humidity, 
+                'Rainfall': rainfall
+                }
         else:
             return "No weather data available"
     else:
