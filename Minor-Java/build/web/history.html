@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CropPred - Smart Crop Prediction</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="home.css">
+<!--     <link rel="stylesheet" href="styles/about.css"> 
+     <link rel="stylesheet" href="styles/get-started.css"> -->
+    <link rel="stylesheet" href="footer.css">
+    <!-- Web Icon -->
+    <link rel="icon" href="CropPred.png" type="image/png">
+
+    <style>
+
+.get-started-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #259755 0%, #27ae60 100%); /* Replaced var(--primary-color) and var(--secondary-color) */
+    color: #ffffff; /* Replaced var(--white) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.get-started-content {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.get-started-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+    opacity: 0.9;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* gap:; */
+    margin-bottom: 4rem;
+    margin-left: 15.5%;
+    /* padding: -15px; */
+}
+
+.feature-card {
+    height: 300px;
+    width: 330px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.cta-section {
+    margin-top: 3rem;
+}
+
+.cta-section .primary-btn {
+   background-color: #ffffff; /* Replaced var(--white) */
+    color: #259755; /* Replaced var(--primary-color) */
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    margin-bottom: 1rem;
+}
+
+.cta-section .primary-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-note {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .get-started-section {
+        padding: 60px 20px;
+    }
+
+    .get-started-section h2 {
+        font-size: 2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}   
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#foot
+{
+    margin-top: -5%;
+}
+</style>
+
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="CropPred.png" alt="CropPred" class="logo-img">
+            <span>CropPred</span>
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html" class="active">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="#foot">Contact</a>
+            <a href="Logout">Logout</a>
+            <!-- <a href="#try-now">Get Started</a> -->
+            <!-- <button onclick="window.location.href='sign-in.html'" class="sign-in-btn">Sign In</button> -->
+        </div>
+        <button class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Home Section
+    <section id="home" class="home-section">
+        <div class="content">
+            <h1>Predict Your Crop Success</h1>
+            <p>Use advanced AI to determine the best crops for your land</p>
+            <div class="cta-buttons">
+                <button class="primary-btn">Get Started</button>
+                <button class="secondary-btn" >Learn More</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZmFybXx8fHx8fDE2MzQ0MjY0MjA&ixlib=rb-1.2.1&q=80&w=700" alt="Farming">
+        </div>
+    </section> -->
+
+    <!-- Get Started Section -->
+    <section id="try-now" class="get-started-section">
+        <div class="get-started-content">
+            <!-- <h2>Start Your Journey</h2>
+            <p class="subtitle">Transform your farming with data-driven decisions</p>
+             -->
+            <div class="features-grid">
+              
+            </div>
+<!-- 
+            <div class="cta-section">
+                <button class="primary-btn">Start Free Trial</button>
+                <p class="cta-note">No credit card required • 30-day free trial</p>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="foot">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: support@croppred.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <a href="#">Report Bugs</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CropPred. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <!--<script src="navbar.js"></script>-->
+</body>
+</html>

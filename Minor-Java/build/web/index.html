@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CropPred - Smart Crop Prediction</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="get-started.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- Web Icon -->
+    <link rel="icon" href="CropPred.png" type="image/png">
+    
+    <style>
+        #sign
+        {
+            color:black;
+            text-decoration: none;
+        }
+        
+        #navv{
+            background-color: white;
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="navbar" id="navv">
+        <div class="logo">
+            <img src="CropPred.png" alt="CropPred" class="logo-img">
+            <span>CropPred</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#try-now">Get Started</a>
+            <button onclick="window.location.href='sign-in.html'" class="sign-in-btn">Sign In</button>
+        </div>
+        <button class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="content">
+            <h1>Predict Your Crop Success</h1>
+            <p>Use advanced AI to determine the best crops for your land</p>
+            <div class="cta-buttons">
+                <button class="primary-btn">Get Started</button>
+                <button class="secondary-btn" >Learn More</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZmFybXx8fHx8fDE2MzQ0MjY0MjA&ixlib=rb-1.2.1&q=80&w=700" alt="Farming">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About CropPred</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Our Mission</h3>
+                <p>Empowering farmers worldwide with AI-driven insights to optimize crop selection and maximize yields while promoting sustainable agriculture practices.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number">1+</span>
+                        <span class="stat-label">Farmers Helped</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-card">
+                <h3>Technology Stack</h3>
+                <p>Our advanced machine learning models are trained on Indian agricultural data, weather patterns, and soil composition analysis. It uses OpenWeather API to get future predictions of weather.</p>
+                <ul class="tech-list">
+                    <li>GradientBoost Model</li>
+                    <!--<li>OpenWeather API</li>-->
+                </ul>
+            </div>
+            <div class="about-card">
+                <h3>Research & Development</h3>
+                <p>Our team of agricultural scientists and data experts continuously improve our prediction models through extensive research and real-world testing.</p>
+                <div class="research-highlights">
+                    <span class="highlight">95% Accuracy</span>
+                    <span class="highlight">Real-time Updates</span>
+                </div>
+            </div>
+            <div class="about-card">
+                <h3>Impact & Success</h3>
+                <p>We've helped farmers achieve remarkable results through smart crop selection and timing recommendations.</p>
+                <div class="impact-stats">
+                    <div class="impact-stat">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">Yield Increase</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="stat-number">30%</span>
+                        <span class="stat-label">Water Saved</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section id="try-now" class="get-started-section">
+        <div class="get-started-content">
+            <h2>Start Your Journey</h2>
+            <p class="subtitle">Transform your farming with data-driven decisions</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌱</div>
+                    <h3>Crop Analysis</h3>
+                    <p>Get personalized crop recommendations based on your land's characteristics</p>
+                </div>
+<!--                <div class="feature-card">
+                    <div class="feature-icon">🌡️</div>
+                    <h3>Weather Integration</h3>
+                    <p>Real-time weather data to optimize planting and harvesting times</p>
+                </div>-->
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Yield Predictions</h3>
+                    <p>Accurate yield forecasts to help plan your harvest and market strategy</p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <!--<button class="primary-btn">Sign Up</button>-->
+                <button class="primary-btn"><a href="sign-up.html" id="sign">Sign Up</a></button>
+                <!--<p class="cta-note">No credit card required • 30-day free trial</p>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: support@croppred.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <a href="#">Report Bugs</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CropPred. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <!--<script src="navbar.js"></script>-->
+    <script src="sign-up.js"></script>
+    <script src="form-handler.js"></script>
+    <script src="location-data.js"></script>
+    <script src="otp-handler.js"></script>
+    <script src="validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CropPred - Smart Crop Prediction</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="home.css">
+<!--     <link rel="stylesheet" href="styles/about.css"> 
+     <link rel="stylesheet" href="styles/get-started.css"> -->
+    <link rel="stylesheet" href="footer.css">
+    <!-- Web Icon -->
+    <link rel="icon" href="CropPred.png" type="image/png">
+
+  <style>
+
+        *
+        {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .form-group label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.get-started-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #259755 0%, #27ae60 100%); /* Replaced var(--primary-color) and var(--secondary-color) */
+    color: #ffffff; /* Replaced var(--white) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+}
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #259755;
+            margin-bottom: 6%;
+            text-decoration: underline;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .form-row .form-group {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .form-row .form-group:last-child {
+            margin-right: 0;
+        }
+        .form-group label {
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+            /* font-size: 14px; */
+            /* font-weight: bold; */
+            display: block;
+            margin-bottom: 8px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            border: 1.6px solid black;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .button-group {
+            text-align: center;
+            /* font-weight: bold; */
+        }
+        .button-group input[type="submit"], .button-group input[type="reset"], .button-group input[type="button"] {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        .button-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .button-group input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+            font-weight: bold;
+        }
+        .button-group input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        .button-group input[type="reset"]:hover {
+            background-color: #da190b;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="CropPred.png" alt="CropPred" class="logo-img">
+            <span>CropPred</span>
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html" class="active">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="#foot">Contact</a>
+            <a href="Logout">Logout</a>
+            <!-- <a href="#try-now">Get Started</a> -->
+            <!-- <button onclick="window.location.href='sign-in.html'" class="sign-in-btn">Sign In</button> -->
+        </div>
+        <button class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Home Section
+    <section id="home" class="home-section">
+        <div class="content">
+            <h1>Predict Your Crop Success</h1>
+            <p>Use advanced AI to determine the best crops for your land</p>
+            <div class="cta-buttons">
+                <button class="primary-btn">Get Started</button>
+                <button class="secondary-btn" >Learn More</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZmFybXx8fHx8fDE2MzQ0MjY0MjA&ixlib=rb-1.2.1&q=80&w=700" alt="Farming">
+        </div>
+    </section> -->
+
+    <!-- Get Started Section -->
+   <section id="try-now" class="get-started-section">
+        <div class="container">
+            <h2>Enter Details</h2>
+            <form action="Prediction" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="n_soil">N_SOIL (Nitrogen in soil):</label>
+                        <input type="number" id="n_soil" name="n_soil" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p_soil">P_SOIL (Phosphorus in soil):</label>
+                        <input type="number" id="p_soil" name="p_soil" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="k_soil">K_SOIL (Potassium in soil):</label>
+                        <input type="number" id="k_soil" name="k_soil" step="0.1" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="temperature">TEMPERATURE (°C):</label>
+                        <input type="number" id="temperature" name="temperature" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="humidity">HUMIDITY (%):</label>
+                        <input type="number" id="humidity" name="humidity" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ph">pH (Soil pH):</label>
+                        <input type="number" id="ph" name="ph" step="0.1" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rainfall">RAINFALL (mm):</label>
+                        <input type="number" id="rainfall" name="rainfall" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">STATE:</label>
+                        <input type="text" id="state" name="state" required>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <input type="submit" value="Predict">
+                    <input type="reset" value="Reset">
+                    <a href="history"><input type="button" value="History"></a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="foot">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: support@croppred.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <a href="#">Report Bugs</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CropPred. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <!--<script src="navbar.js"></script>-->
+</body>
+</html>

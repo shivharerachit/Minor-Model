@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - CropPred</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="auth.css">
+    <!-- Web Icon -->
+    <link rel="icon" href="CropPred.png" type="image/png">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-progress">
+            <div class="progress-step active" data-step="1">1</div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="2">2</div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="3">3</div>
+        </div>
+
+        <div class="auth-card">
+            <div class="auth-header">
+                <img src="CropPred.png" alt="CropPred" class="auth-logo">
+                <h1>Create Account</h1>
+                <p>Join CropPred to optimize your farming</p>
+            </div>
+
+            <form id="signUpForm" class="auth-form" action="signup" method="POST">
+                <!-- Step 1 -->
+                <div class="form-step" data-step="1">
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone_no" required pattern="[0-9]{10}" placeholder="Mobile Number">
+                    </div>
+                    <div id="otpSection" class="form-group hidden">
+                        <input type="text" id="pass" name="password" maxlength="6" placeholder="Password">
+                        <!-- <div class="otp-timer">OTP expires in: <span id="timer">02:00</span></div> -->
+                        <!-- <button type="button" class="text-btn" id="resendOtp">Resend OTP</button> -->
+                    </div>
+<!--                     <div class="captcha-container">
+                        <div id="captcha"></div>
+                        <input type="text" id="captchaInput" placeholder="Enter Captcha">
+                    </div> -->
+                    <button type="button" class="primary-btn next-btn">Next</button>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="form-step hidden" data-step="2">
+                    <div class="form-group">
+                        <input type="text" id="aadhar" name="aadhar" required pattern="[0-9]{12}" placeholder="Aadhar Number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="username" name="username" required placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Email ID">
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="secondary-btn prev-btn">Previous</button>
+                        <button type="button" class="primary-btn next-btn">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="form-step hidden" data-step="3">
+                    <div class="form-group">
+                        <div class="profile-upload">
+                            <img id="profilePreview" src="defalt-avatar.png" alt="Profile Preview">
+                            <input type="file" id="profilePicture" accept="image/*">
+                            <label for="profilePicture" class="upload-btn">Upload Photo</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="fullname" required placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="age" required placeholder="Age">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" id="dob" name="dob" required placeholder="Date of Birth">
+                        </div>
+                        <div class="form-group">
+                            <select id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <select id="state" name="state" required>
+                                <option value="">Select State</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <!-- States will be populated via JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="city" name="city" required>
+                                <option value="">Select City</option>
+                                <option value="america">America</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="locality" required placeholder="Locality">
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="terms" required>
+                            I agree to the <a href="#">Terms and Conditions</a>
+                        </label>
+                        <label>
+                            <input type="checkbox" id="privacy" required>
+                            I consent to the <a href="#">Privacy Policy</a>
+                        </label>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="secondary-btn prev-btn">Previous</button>
+                        <button type="submit" class="primary-btn">Create Account</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+<!--
+     Crop Details Modal 
+    <div id="cropModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Tell us about your farming</h2>
+            <form id="cropForm">
+                <div class="form-group">
+                    <select id="currentCrop" required>
+                        <option value="">Select Current Crop</option>
+                        <option value="rice">Rice</option>
+                        <option value="wheat">Wheat</option>
+                        <option value="corn">Corn</option>
+                        <option value="cotton">Cotton</option>
+                         More options 
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="yield" required placeholder="Average Yield (in quintals)">
+                </div>
+                <div class="button-group">
+                    <button type="button" class="secondary-btn" id="skipCrop">Skip</button>
+                    <button type="submit" class="primary-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>-->
+
+    <script src="sign-up.js"></script>
+    <script src="form-handler.js"></script>
+    <script src="location-data.js"></script>
+    <script src="otp-handler.js"></script>
+    <script src="validation.js"></script>
+</body>
+</html>

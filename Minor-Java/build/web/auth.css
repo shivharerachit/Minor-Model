@@ -1,0 +1,289 @@
+/* Auth Container */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #259755 0%, #27ae60 100%); /* Replaced var(--primary-color) and var(--secondary-color) */
+}
+
+/* Progress Bar */
+.auth-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.progress-step {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #ffffff; /* Replaced var(--white) */
+    border: 2px solid #259755; /* Replaced var(--primary-color) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #259755; /* Replaced var(--primary-color) */
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.progress-step.active {
+    background-color: #259755; /* Replaced var(--primary-color) */
+    color: #ffffff; /* Replaced var(--white) */
+}
+
+.progress-line {
+    flex: 1;
+    height: 3px;
+    background-color: #ffffff; /* Replaced var(--white) */
+    margin: 0 10px;
+}
+
+.progress-line.active {
+    background-color: #259755; /* Replaced var(--primary-color) */
+}
+
+/* Auth Card */
+.auth-card {
+    background-color: #ffffff; /* Replaced var(--white) */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-logo {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+.auth-header h1 {
+    color: #333; /* Replaced var(--text-color) */
+    margin-bottom: 0.5rem;
+}
+
+.auth-header p {
+    color: #666;
+}
+
+/* Form Styles */
+.form-step {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #259755; /* Replaced var(--primary-color) */
+    box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2);
+    outline: none;
+}
+
+/* Profile Upload */
+.profile-upload {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#profilePreview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #259755; /* Replaced var(--primary-color) */
+}
+
+.upload-btn {
+    background-color: #259755; /* Replaced var(--primary-color) */
+    color: #ffffff; /* Replaced var(--white) */
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+    background-color: #27ae60; /* Replaced var(--secondary-color) */
+}
+
+#profilePicture {
+    display: none;
+}
+
+/* Checkbox Styles */
+.checkbox-group {
+    margin-top: 1rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.button-group button {
+    flex: 1;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #ffffff; /* Replaced var(--white) */
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* OTP Section */
+.otp-section {
+    text-align: center;
+}
+
+.otp-inputs {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.otp-input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.otp-timer {
+    color: #666;
+    margin: 1rem 0;
+}
+
+.text-btn {
+    background-color: #333; /* Replaced var(--text-color) */
+    color: #ffffff; /* Replaced var(--white) */
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+#captchaInput {
+    margin-bottom: 10px;
+}
+
+.resend-btn {
+    color: #259755; /* Replaced var(--primary-color) */
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .auth-card {
+        padding: 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}

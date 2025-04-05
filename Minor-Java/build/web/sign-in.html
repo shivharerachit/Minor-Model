@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - CropPred</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="auth.css">
+    <!-- Web Icon -->
+    <link rel="icon" href="CropPred.png" type="image/png">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <img src="CropPred.png" alt="CropPred" class="auth-logo">
+                <h1>Welcome Back</h1>
+                <p>Sign in to continue to CropPred</p>
+            </div>
+
+            <form id="signInForm" class="auth-form" action="login" method="POST">
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phoneNO" required pattern="[0-9]{10}" placeholder="Mobile Number">
+                </div>
+                
+<!--                <div id="otpSection" class="form-group hidden">
+                    <input type="text" id="otp" maxlength="6" placeholder="Enter OTP">
+                    <div class="otp-timer">OTP expires in: <span id="timer">02:00</span></div>
+                    <button type="button" class="text-btn" id="resendOtp">Resend OTP</button>
+                </div>-->
+<div id="otpSection" class="form-group hidden">
+                        <input type="text" id="pass" name="password" maxlength="6" placeholder="Password">
+                        <!-- <div class="otp-timer">OTP expires in: <span id="timer">02:00</span></div> -->
+                        <!-- <button type="button" class="text-btn" id="resendOtp">Resend OTP</button> -->
+                    </div>
+<!--                <div class="captcha-container">
+                    <div id="captcha"></div>
+                    <input type="text" id="captchaInput" placeholder="Enter Captcha">
+                </div>-->
+
+                <button type="submit" class="primary-btn">Login</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+<script src="sign-up.js"></script>
+    <script src="form-handler.js"></script>
+    <script src="location-data.js"></script>
+    <script src="otp-handler.js"></script>
+    <script src="validation.js"></script>
+</body>
+</html>

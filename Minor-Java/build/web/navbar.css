@@ -1,0 +1,105 @@
+.navbar {
+    position: fixed;
+    top: 3%;
+    left: 20%;
+    right: 20%;
+    background-color: #ffffff; /* Replaced var(--white) */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Replaced var(--shadow) */
+    z-index: 1000;
+    border-radius: 90px;
+    background-color: #ffffff;
+    /*min-width:1000px;*/
+    /* background-color: rgba(186, 185, 185, 0.958); */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 40px;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #259755; /* Replaced var(--primary-color) */
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333; /* Replaced var(--text-color) */
+    font-weight: 600;
+    font-size: larger;
+    transition: color 0.3s ease;
+    gap:3rem;
+}
+
+/*.nav-links a:hover,
+.nav-links a.active {
+    color: #259755;  Replaced var(--primary-color) 
+}*/
+
+.sign-in-btn {
+    background-color: #259755; /* Replaced var(--primary-color) */
+    color: #ffffff; /* Replaced var(--white) */
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    background-color: #27ae60; /* Replaced var(--secondary-color) */
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .mobile-menu-btn span {
+        width: 25px;
+        height: 3px;
+        background-color: #333; /* Replaced var(--text-color) */
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff; /* Replaced var(--white) */
+        padding: 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Replaced var(--shadow) */
+    }
+}
